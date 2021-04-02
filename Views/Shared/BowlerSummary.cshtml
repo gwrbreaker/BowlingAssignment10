@@ -1,0 +1,15 @@
+﻿@model Bowlers
+<!--This is the partial view that is drawn on from the index page to create the table of bowler data-->
+<tr style="padding-left:35px" class="text-center">
+
+    <td class="table-striped">@Model.BowlerFirstName</td>
+    <td class="table-warning">@Model.BowlerMiddleInit</td>
+    <td class="table-success">@Model.BowlerLastName</td>
+    <td class="table-primary">@Model.BowlerAddress</td>
+    <td class="table-info">@Model.BowlerCity</td>
+    <td class="table-dark">@Model.BowlerState</td>
+    <td class="table-danger">@Model.BowlerZip</td>
+    <td class="table-active"><strong>@Model.BowlerPhoneNumber</strong></td>
+
+
+</tr>

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = ViewBag.teamname;
+}
+
+@model BowlingTeamViewModel
+<div class="row m-lg-auto p-3">
+    <h3><em>Here is the contact info for each team:</em></h3>
+</div>
+<div class="container">
+    <div class="col align-self-end">
+        Click a button to filter by Team Name
+        <!--This is where the team name filter is dynamically built-->
+        <vc:navigation-menu />
+
+    </div>
+    <br />
+    <h1 id="team">@ViewBag.teamname</h1>
+    <div class="col align-self-center">
+        <table style="padding-left:50px" class="text-center">
+            <thead style="padding-left:35px" class="text-center">
+                <tr style="padding-left:35px" class="text-center">
+
+                    <th>First Name</th>
+                    <th>Middle Initial</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Phone Number</th>
+
+                </tr>
+            </thead>
+            <!--This goes through the enumeration to get all the inputed values-->
+            <tbody style="padding-left:50px" class="text-center">
+                @foreach (BowlingAssignment10.Models.Bowlers x in Model.Bowlers)
+                {
+                    //This is where the partial view of the bowler data is stored
+
+                    <partial name="BowlerSummary" model="x" />
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
