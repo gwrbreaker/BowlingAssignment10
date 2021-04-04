@@ -12,6 +12,6 @@ namespace BowlingAssignment10.Models.ViewModels
         public IEnumerable<Bowlers> Bowlers { get; set; }
         public PagingInfo PagingInfo { get; set; }
 
-        
+        public string TeamName { get; set; }
     }
 }

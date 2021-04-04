@@ -21,9 +21,10 @@ namespace BowlingAssignment10.Components
 
                 //These are similar to SQL commands and makes it so that each team is selected,
                 //That only 1 distinct instance of each is used, and how they are ordered 
-                .Select(x => x.Team)
+                .Select(b => b.Team)
                 .Distinct()
-                .OrderBy(x => x);
+                .OrderBy(b => b);
+
 
             return View(NavBarList);
         }
